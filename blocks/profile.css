@@ -2,6 +2,16 @@
   display: flex;
   align-items: center;
   padding-top: 40px;
+  max-width: 880px;
+  width: 100%;
+}
+
+.profile__info {
+  display: grid;
+  grid-template-areas:
+    "title button"
+    "description description";
+  grid-template-columns: minmax(auto, 375px) auto;
 }
 
 .profile__image {
@@ -13,27 +23,30 @@
   margin-right: 24px;
 }
 
-.profile__info {
-  display: grid;
-  grid-template-areas:
-    "title button"
-    "description description";
-  grid-template-columns: minmax(auto, 373px) auto;
-}
-
 .profile__title {
+  font-family: "Inter", Arial, sans-serif;
   font-size: 42px;
   line-height: 48px;
   font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  max-width: 375px;
   grid-area: title;
   margin: 0;
 }
 
 
 .profile__description {
+  font-family: "Inter", Arial, sans-serif;
   font-size: 18px;
   line-height: 22px;
   font-weight: 400;
+  max-width: 415px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   grid-area: description;
   margin: 0;
   margin-bottom: 36px;
@@ -43,8 +56,15 @@
   background: transparent url(../images/Edit\ Button.svg) center no-repeat;
   height: 24px;
   width: 24px;
+  align-self: center;
   grid-area: button;
-  border-color: white;
+  border: 1px solid #fff;
+  margin-left: 20px;
+}
+
+.profile__edit-button:hover {
+opacity: 0.6;
+cursor: pointer;
 }
 
 .profile__add-button {
@@ -52,13 +72,28 @@
   width: 150px;
   height: 50px;
   margin-left: auto;
-  border-color: white;
+  border: 2px solid #fff;
+  flex-wrap: wrap;
+  border-radius: 1px;
 }
 
-@media screen and (max-width:470px){
-  .profile{
-    /*background-color: blue;*/
+.profile__add-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width:480px) {
+  .profile {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile__title {
+    max-width: 196px;
+    font-size: 22px;
+    line-height: 27px;
+    margin: auto;
   }
 
   .profile_info {
@@ -66,11 +101,19 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    margin-top: 30px;
+    column-gap: 10px;
+    margin-left: 0;
+  }
+  .profile__image {
+    margin: 0 auto;
   }
 
   .profile__description {
     width: 100%;
     text-align: center;
+    font-size: 14px;
+    line-height: 17px;
   }
 
   .profile__add-button {
@@ -78,4 +121,9 @@
     width: 100%;
     max-width: 282px;
   }
+
+  .profile__edit-button {
+    margin-right: 20px;
+  }
+  
 }

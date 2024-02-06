@@ -2,50 +2,17 @@
 margin-top: 53px;
 }
 
-.card__list {
+.cards__list {
   display: grid;
   padding: 0;
   margin: 0;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit,282px);
+  grid-template-columns: repeat(auto-fit, 282px);
   grid-gap: 20px 17px;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    list-style: none;
-    }
-
-.card__image {
-  width: 282px;
-  height: 282px;
-}
-
-.card__title {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.card__description {
-  display: flex;
-  background-color: white;
-  color: black;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
-  align-items: center;
-  justify-content: space-between;text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.card__like-button {
-  background: transparent url(../images/Like\ Button.svg) center no-repeat;
-  width: 21px;
-  height: 18px;
-  border: none;
+@media screen and (max-width: 620px) {
+  .cards {
+padding-top: 36px;
+  }
 }
