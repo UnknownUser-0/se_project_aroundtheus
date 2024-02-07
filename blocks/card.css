@@ -1,7 +1,6 @@
     .card {
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
     list-style: none;
     }
 
@@ -14,7 +13,6 @@
         white-space: nowrap;
         overflow: hidden;
         width: 193px;
-        height: 29px;
         margin: 0;
       }
 
@@ -24,10 +22,7 @@
         color: black;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 25px 20px 25px 20px;
         align-items: center;
         justify-content: space-between;
       }
@@ -35,6 +30,8 @@
       .card__image {
         width: 282px;
         height: 282px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
       }
 
       .card__like-button {
@@ -45,6 +42,6 @@
       }
 
       .card__like-button:hover {
-          opacity: 0.6;
+          opacity: 0.5;
           cursor: pointer;
       }

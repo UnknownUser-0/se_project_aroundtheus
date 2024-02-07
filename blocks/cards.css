@@ -1,5 +1,5 @@
 .cards {
-margin-top: 53px;
+margin-top: 40px;
 }
 
 .cards__list {
@@ -13,6 +13,6 @@ margin-top: 53px;
 
 @media screen and (max-width: 620px) {
   .cards {
-padding-top: 36px;
+padding-top: 0;
   }
 }
