@@ -48,7 +48,6 @@
   overflow: hidden;
   grid-area: description;
   margin: 0;
-  margin-bottom: 36px;
 }
 
 .profile__edit-button {
@@ -95,7 +94,7 @@ cursor: pointer;
     margin-left: 60px ;
   }
 
-  .profile_info {
+  .profile__info {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -113,6 +112,8 @@ cursor: pointer;
     text-align: center;
     font-size: 14px;
     line-height: 17px;
+    margin-top: 10px;
+    margin-bottom: 30px;
   }
 
   .profile__add-button {
@@ -124,7 +125,7 @@ cursor: pointer;
   .profile__edit-button {
     max-width: 18px;
     max-height: 18px;
-    margin-right: 22px;
+    margin-right: 34px;
     margin-left: auto;
   }
   
