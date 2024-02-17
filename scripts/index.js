@@ -30,3 +30,19 @@ const cardData6 = {
 
 const initialCards = [cardData1, cardData2, cardData3, cardData4, cardData5, cardData6];
 console.log(initialCards);
+
+const profileEditButton = document.querySelector("#profile-edit-button");
+const profileEditModal = document.querySelector("#profile-edit-modal");
+const profileCloseButton = document.querySelector("#profile-close-modal");
+
+profileEditButton.addEventListener("click", () => {
+ profileEditModal.classList.add("modal__opened");
+});
+
+function closePopup() {
+    profileEditModal.classList.remove("modal__opened");
+}
+
+profileCloseButton.addEventListener("click", () => {
+    closePopup();
+});
