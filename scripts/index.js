@@ -41,10 +41,19 @@ const initialCards = [
   const profileEditForm = profileEditModal.querySelector(".modal__form");
   const cardListEl = document.querySelector(".cards__list");
   const cardTemplate = document.querySelector("#card-template").content.firstElementChild;
+  const addNewCardButton = document.querySelector(".profile__add-button");
+  const addCardModal = document.querySelector("#add-card-modal");
+  const addCardModalCloseButton = addCardModal.querySelector("#add-card-close-modal");
 
 function closePopop() {
   profileEditModal.classList.remove("modal_opened");
 }
+
+
+function modal_opened() {
+  addCardModal.classList.add("modal_opened");
+}
+
 
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -78,3 +87,6 @@ initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
   cardListEl.append(cardElement);
 });
+
+addNewCardButton.addEventListener('click', modal_opened);
+addCardModalCloseButton.addEventListener('click', () => addCardModal.classList.remove("modal_opened"));
